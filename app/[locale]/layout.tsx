@@ -45,9 +45,11 @@ export default async function LocaleLayout({
         shareEmailSubject={dict.shareEmailSubject}
         shareEmailBodyIntro={dict.shareEmailBodyIntro}
         shareInviteTitle={dict.shareInviteTitle}
-        shareSubscribeText={dict.shareSubscribeText(
-          `https://${houseConfig.domain}/en/subscribe`
-        )}
+        shareSubscribeText={
+          houseConfig.subscriptionsEnabled
+            ? dict.shareSubscribeText(`https://${houseConfig.domain}/en/subscribe`)
+            : ""
+        }
       />
     </>
   );

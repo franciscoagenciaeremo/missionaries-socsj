@@ -18,6 +18,8 @@ export const missionariesHouseConfig: HouseConfig = {
   },
   domain: "missionaries.socsj.org",
   palette: ssjDefaultPalette,
+  // Oculto por pedido de Catalina (26/11/2026) hasta definir la suscripción.
+  subscriptionsEnabled: false,
   ga4MeasurementId: "",
   logo: {
     en: "/logos/CruzENG_Azul.svg",

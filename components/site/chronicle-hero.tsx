@@ -15,9 +15,10 @@ export function ChronicleHero({
 }: {
   eyebrow: string;
   title: string;
-  quote: string;
+  quote?: string;
   quoteCitation?: string;
-  ctaLabel: string;
+  /** Sin texto, no se muestra el botón de suscripción. */
+  ctaLabel?: string;
   /** Sin foto, el hero va sobre fondo azul de marca y más bajo. */
   imageSrc?: string;
   imageAlt?: string;
@@ -61,19 +62,23 @@ export function ChronicleHero({
         <h1 className="font-display text-3xl font-extrabold leading-tight sm:text-5xl">
           {title}
         </h1>
-        <p className="font-quote mx-auto max-w-2xl text-xl italic text-ssj-white/90 sm:text-2xl">
-          &ldquo;{quote}&rdquo;
-        </p>
+        {quote && (
+          <p className="font-quote mx-auto max-w-2xl text-xl italic text-ssj-white/90 sm:text-2xl">
+            &ldquo;{quote}&rdquo;
+          </p>
+        )}
         {quoteCitation && (
           <p className="-mt-4 text-sm text-ssj-white/70 sm:text-base">
             {quoteCitation}
           </p>
         )}
-        <div className="mt-2 flex justify-center">
-          <Button variant="gold" size="lg" onClick={scrollToSubscribe}>
-            {ctaLabel}
-          </Button>
-        </div>
+        {ctaLabel && (
+          <div className="mt-2 flex justify-center">
+            <Button variant="gold" size="lg" onClick={scrollToSubscribe}>
+              {ctaLabel}
+            </Button>
+          </div>
+        )}
       </motion.div>
     </section>
   );

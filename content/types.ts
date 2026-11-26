@@ -44,7 +44,8 @@ export type Chronicle = {
   /** "YYYY-MM" */
   period: string;
   title: LocalizedText;
-  quote: LocalizedText;
+  /** Frase debajo del título en el hero. Opcional. */
+  quote?: LocalizedText;
   /** Cita de la fuente de la frase del hero, opcional, se muestra debajo de la frase. */
   quoteCitation?: LocalizedText;
   intro: LocalizedText;

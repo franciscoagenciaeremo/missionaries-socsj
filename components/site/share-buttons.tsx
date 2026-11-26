@@ -63,7 +63,7 @@ export function ShareButtons({
     // navegadores/perfiles sin cliente de mail configurado no hace nada
     // visible y confunde con el botón de "Compartir".
     const url = window.location.href;
-    const body = `${emailBodyIntro}\n\n${url}\n\n${subscribeText}`;
+    const body = [emailBodyIntro, url, subscribeText].filter(Boolean).join("\n\n");
     setMailtoHref(
       `mailto:?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(body)}`
     );
@@ -75,7 +75,7 @@ export function ShareButtons({
     // Mismo mensaje que usamos en el mail de invitación, más el link
     // para suscribirse a futuras crónicas, para que el texto que se
     // comparte (por WhatsApp o al copiarlo) no sea solo el link pelado.
-    const text = `${emailBodyIntro}\n\n${subscribeText}`;
+    const text = [emailBodyIntro, subscribeText].filter(Boolean).join("\n\n");
 
     if (typeof navigator !== "undefined" && "share" in navigator) {
       try {

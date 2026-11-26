@@ -3,8 +3,8 @@ import type { Chronicle } from "@/content/types";
 /**
  * Noviembre 2026 · Thanksgiving.
  * Texto: Christopher James, literal (no se corrige ni se reescribe).
- * Título, frase del hero e intro de la tarjeta: tomados del texto; el
- * título es una propuesta de Eremo y queda sujeto al OK.
+ * Título e intro de la tarjeta: tomados del texto. Sin frase debajo del
+ * título, por pedido de Catalina (26/11/2026).
  *
  * Se publica sin fotos por pedido de Catalina (26/11/2026): el hero y la
  * tarjeta van sobre fondo azul de marca. Cuando lleguen las fotos: hero en
@@ -15,9 +15,6 @@ export const chronicle202611: Chronicle = {
   slug: "2026-11-thanksgiving",
   period: "2026-11",
   title: {
-    en: "Happy Thanksgiving from the missions",
-  },
-  quote: {
     en: "Keeping our American tradition alive with turkey, stuffing and gravy... And lots of it!",
   },
   intro: {

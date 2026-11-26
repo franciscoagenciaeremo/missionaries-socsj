@@ -63,16 +63,18 @@ export default async function ChroniclesIndexPage({
         )}
       </section>
 
-      <SubscribeBlock
-        title={dict.subscribeTitle}
-        text={dict.subscribeText}
-        placeholder={dict.subscribeEmailPlaceholder}
-        buttonLabel={dict.subscribeButton}
-        successMessage={dict.subscribeSuccess}
-        errorMessage={dict.subscribeError}
-        locale={locale}
-        houseSlug={houseConfig.houseSlug}
-      />
+      {houseConfig.subscriptionsEnabled && (
+        <SubscribeBlock
+          title={dict.subscribeTitle}
+          text={dict.subscribeText}
+          placeholder={dict.subscribeEmailPlaceholder}
+          buttonLabel={dict.subscribeButton}
+          successMessage={dict.subscribeSuccess}
+          errorMessage={dict.subscribeError}
+          locale={locale}
+          houseSlug={houseConfig.houseSlug}
+        />
+      )}
     </>
   );
 }

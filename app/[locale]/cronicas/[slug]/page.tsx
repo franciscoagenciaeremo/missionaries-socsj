@@ -98,9 +98,9 @@ export default async function ChroniclePage({
       <ChronicleHero
         eyebrow={dict.chronicleEyebrow(period)}
         title={chronicle.title[locale]}
-        quote={chronicle.quote[locale]}
+        quote={chronicle.quote?.[locale]}
         quoteCitation={chronicle.quoteCitation?.[locale]}
-        ctaLabel={dict.ctaReceiveNext}
+        ctaLabel={houseConfig.subscriptionsEnabled ? dict.ctaReceiveNext : undefined}
         imageSrc={chronicle.heroImage?.src}
         imageAlt={chronicle.heroImage?.alt[locale]}
       />
@@ -239,16 +239,18 @@ export default async function ChroniclePage({
 
       <Gallery images={chronicle.gallery} locale={locale} />
 
-      <SubscribeBlock
-        title={dict.subscribeTitle}
-        text={dict.subscribeText}
-        placeholder={dict.subscribeEmailPlaceholder}
-        buttonLabel={dict.subscribeButton}
-        successMessage={dict.subscribeSuccess}
-        errorMessage={dict.subscribeError}
-        locale={locale}
-        houseSlug={houseConfig.houseSlug}
-      />
+      {houseConfig.subscriptionsEnabled && (
+        <SubscribeBlock
+          title={dict.subscribeTitle}
+          text={dict.subscribeText}
+          placeholder={dict.subscribeEmailPlaceholder}
+          buttonLabel={dict.subscribeButton}
+          successMessage={dict.subscribeSuccess}
+          errorMessage={dict.subscribeError}
+          locale={locale}
+          houseSlug={houseConfig.houseSlug}
+        />
+      )}
 
       <MissionQuote locale={locale} />
     </>
