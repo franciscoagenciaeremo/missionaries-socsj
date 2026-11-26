@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+/* ── Webfonts (marca SSJ) ──────────────────────────────────────────── */
+@font-face {
+  font-family: "Mulish";
+  src: url("/fonts/Mulish-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mulish";
+  src: url("/fonts/Mulish-Italic-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Constantia";
+  src: url("/fonts/Constantia.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Tokens de marca SSJ ───────────────────────────────────────────── */
+:root {
+  --ssj-blue: #002856;
+  --ssj-navy-deep: #051a3d;
+  --ssj-navy-panel: #142f5a;
+  --ssj-blue-mid: #2e4e83;
+  --ssj-blue-accent: #386ea1;
+  --ssj-ink: #2a364a;
+  --ssj-gold: #b57422;
+  --ssj-gold-soft: #ac8760;
+  --ssj-gold-deep: #9a631d;
+  --ssj-black: #000000;
+  --ssj-white: #ffffff;
+  --ssj-paper: #f5f6f8;
+  --ssj-celeste: #eef7ff;
+  --ssj-blue-light: #68a2b9;
+  --ssj-line: #d6dcec;
+  --text-muted: #55607a;
+
+  --overlay-quote: radial-gradient(
+      960px 540px at 50% 50%,
+      rgba(46, 78, 131, 0.64) 0%,
+      rgba(20, 47, 90, 0.8) 100%
+    ),
+    linear-gradient(rgba(0, 40, 86, 0.25), rgba(0, 40, 86, 0.25));
+
+  --background: var(--ssj-white);
+  --foreground: var(--ssj-black);
+}
+
+/* ── Tailwind v4: exponer los tokens como utilidades (bg-ssj-blue, etc) ── */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-ssj-blue: var(--ssj-blue);
+  --color-ssj-navy-deep: var(--ssj-navy-deep);
+  --color-ssj-navy-panel: var(--ssj-navy-panel);
+  --color-ssj-blue-mid: var(--ssj-blue-mid);
+  --color-ssj-blue-accent: var(--ssj-blue-accent);
+  --color-ssj-ink: var(--ssj-ink);
+  --color-ssj-gold: var(--ssj-gold);
+  --color-ssj-gold-soft: var(--ssj-gold-soft);
+  --color-ssj-gold-deep: var(--ssj-gold-deep);
+  --color-ssj-black: var(--ssj-black);
+  --color-ssj-white: var(--ssj-white);
+  --color-ssj-paper: var(--ssj-paper);
+  --color-ssj-celeste: var(--ssj-celeste);
+  --color-ssj-blue-light: var(--ssj-blue-light);
+  --color-ssj-line: var(--ssj-line);
+  --color-text-muted: var(--text-muted);
+
+  --font-sans: "Mulish", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Mulish", ui-sans-serif, system-ui, sans-serif;
+  --font-quote: "Constantia", Georgia, "Times New Roman", serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Capitular editorial para el primer párrafo de la crónica completa */
+.drop-cap::first-letter {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 3.8rem;
+  line-height: 0.85;
+  float: left;
+  padding-right: 0.5rem;
+  padding-top: 0.35rem;
+  color: var(--ssj-blue);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
