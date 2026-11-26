@@ -49,6 +49,8 @@ export type HouseConfig = {
   priestName?: string;
   /** Paleta de marca. Por default la paleta institucional de SSJ. */
   palette: LocalePalette;
+  /** false = sin botón ni bloque de suscripción en el índice y en las crónicas. */
+  subscriptionsEnabled: boolean;
   /** ID de medición de GA4 (G-XXXX). Vacío = el sitio no carga Analytics. */
   ga4MeasurementId: string;
   /** Logo (paths dentro de /public). */
