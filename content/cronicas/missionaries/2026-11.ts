@@ -21,6 +21,8 @@ export const chronicle202611: Chronicle = {
     en: "Our first monthly chronicle for all of our family back in the states.",
   },
   body: { en: [] },
+  // PLACEHOLDERS de diseño (pedido de Catalina, 26/11/2026): reemplazar
+  // cada placeholder-N.jpg por la foto real antes de mergear a main.
   contentBlocks: [
     {
       type: "paragraph",
@@ -28,22 +30,6 @@ export const chronicle202611: Chronicle = {
         en: "Happy Thanksgiving or as some would say \"Happy Turkey Day\" to all of our family back in the states! It's a joy to send our first monthly chronicle to all of you as we are all scattered about the globe as seed is sown by the Sower! Some of us are in the UK, some in Europe, some in South America and for now on the East Coast!",
       },
     },
-    {
-      type: "paragraph",
-      text: {
-        en: "We wanted to show a bit more of the fun and \"hidden\" or common life that we are experiencing so you can get a \"wee\" taste as they would say in Scotland. So look forward to next months edition. Thank you for your prayers, love and support as we seek to do the will of God as missionaries in the Saint John Society!",
-      },
-    },
-    {
-      type: "paragraph",
-      text: {
-        en: "But for now enjoy seeing how we all are keeping our American tradition alive with turkey, stuffing and gravy... And lots of it!",
-      },
-    },
-    { type: "paragraph", text: { en: "In Christ," } },
-    { type: "paragraph", text: { en: "Christopher James" } },
-    // PLACEHOLDERS de diseño (pedido de Catalina, 26/11/2026): reemplazar
-    // cada placeholder-N.jpg por la foto real antes de mergear a main.
     {
       type: "imagePair",
       images: [
@@ -56,6 +42,12 @@ export const chronicle202611: Chronicle = {
           caption: { en: "" },
         },
       ],
+    },
+    {
+      type: "paragraph",
+      text: {
+        en: "We wanted to show a bit more of the fun and \"hidden\" or common life that we are experiencing so you can get a \"wee\" taste as they would say in Scotland. So look forward to next months edition. Thank you for your prayers, love and support as we seek to do the will of God as missionaries in the Saint John Society!",
+      },
     },
     {
       type: "imagePair",
@@ -71,6 +63,12 @@ export const chronicle202611: Chronicle = {
       ],
     },
     {
+      type: "paragraph",
+      text: {
+        en: "But for now enjoy seeing how we all are keeping our American tradition alive with turkey, stuffing and gravy... And lots of it!",
+      },
+    },
+    {
       type: "imagePair",
       images: [
         {
@@ -83,6 +81,8 @@ export const chronicle202611: Chronicle = {
         },
       ],
     },
+    { type: "paragraph", text: { en: "In Christ," } },
+    { type: "paragraph", text: { en: "Christopher James" } },
   ],
   gallery: [],
   published: true,
