@@ -62,6 +62,7 @@ export async function generateMetadata({
   if (!isLocale(locale)) return {};
   const chronicle = findChronicle(slug);
   if (!chronicle) return {};
+  const shareImage = chronicle.cardImage ?? chronicle.heroImage;
   return {
     title: chronicle.title[locale],
     description: chronicle.intro[locale],
@@ -69,12 +70,9 @@ export async function generateMetadata({
       title: chronicle.title[locale],
       description: chronicle.intro[locale],
       type: "article",
-      images: [
-        {
-          url: (chronicle.cardImage ?? chronicle.heroImage).src,
-          alt: (chronicle.cardImage ?? chronicle.heroImage).alt[locale],
-        },
-      ],
+      ...(shareImage && {
+        images: [{ url: shareImage.src, alt: shareImage.alt[locale] }],
+      }),
     },
   };
 }
@@ -103,8 +101,8 @@ export default async function ChroniclePage({
         quote={chronicle.quote[locale]}
         quoteCitation={chronicle.quoteCitation?.[locale]}
         ctaLabel={dict.ctaReceiveNext}
-        imageSrc={chronicle.heroImage.src}
-        imageAlt={chronicle.heroImage.alt[locale]}
+        imageSrc={chronicle.heroImage?.src}
+        imageAlt={chronicle.heroImage?.alt[locale]}
       />
 
       {blocks ? (

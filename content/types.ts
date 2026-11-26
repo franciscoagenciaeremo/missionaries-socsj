@@ -48,7 +48,8 @@ export type Chronicle = {
   /** Cita de la fuente de la frase del hero, opcional, se muestra debajo de la frase. */
   quoteCitation?: LocalizedText;
   intro: LocalizedText;
-  heroImage: ChronicleImage;
+  /** Foto de portada. Opcional: sin foto, el hero y la tarjeta van sobre fondo azul de marca. */
+  heroImage?: ChronicleImage;
   /** Foto de la tarjeta en el índice y al compartir el link. Opcional: si falta, se usa heroImage. */
   cardImage?: ChronicleImage;
   /** Sección "lo más destacado" — foto grande + texto. */

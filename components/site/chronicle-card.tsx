@@ -4,6 +4,27 @@ import type { Chronicle } from "@/content/types";
 import type { Locale } from "@/lib/i18n";
 import { formatPeriod } from "@/lib/i18n";
 
+/** Foto de la tarjeta, o la cruz sobre fondo azul de marca si la crónica no tiene foto. */
+function CardImage({ chronicle, locale }: { chronicle: Chronicle; locale: Locale }) {
+  const image = chronicle.cardImage ?? chronicle.heroImage;
+  if (!image) {
+    return (
+      <div className="flex h-full w-full items-center justify-center bg-ssj-navy-deep">
+        <Image src="/logos/CruzENG_Blanco.svg" alt="" width={56} height={56} />
+      </div>
+    );
+  }
+  return (
+    <Image
+      src={image.src}
+      alt={image.alt[locale]}
+      fill
+      sizes="(min-width: 768px) 33vw, 100vw"
+      className="object-cover"
+    />
+  );
+}
+
 export function ChronicleCard({
   chronicle,
   locale,
@@ -24,13 +45,7 @@ export function ChronicleCard({
         className="flex flex-col overflow-hidden rounded-md border border-ssj-line bg-ssj-paper opacity-60"
       >
         <div className="relative aspect-[4/3] w-full bg-ssj-navy-panel/20">
-          <Image
-            src={(chronicle.cardImage ?? chronicle.heroImage).src}
-            alt={(chronicle.cardImage ?? chronicle.heroImage).alt[locale]}
-            fill
-            sizes="(min-width: 768px) 33vw, 100vw"
-            className="object-cover"
-          />
+          <CardImage chronicle={chronicle} locale={locale} />
         </div>
         <div className="flex flex-1 flex-col gap-2 p-6">
           <span className="text-xs font-bold tracking-[0.15em] text-ssj-gold">
@@ -51,13 +66,7 @@ export function ChronicleCard({
   return (
     <article className="flex flex-col overflow-hidden rounded-md border border-ssj-line bg-ssj-white shadow-sm transition-shadow hover:shadow-md">
       <div className="relative aspect-[4/3] w-full">
-        <Image
-          src={(chronicle.cardImage ?? chronicle.heroImage).src}
-          alt={(chronicle.cardImage ?? chronicle.heroImage).alt[locale]}
-          fill
-          sizes="(min-width: 768px) 33vw, 100vw"
-          className="object-cover"
-        />
+        <CardImage chronicle={chronicle} locale={locale} />
       </div>
       <div className="flex flex-1 flex-col gap-2 p-6">
         <span className="text-xs font-bold tracking-[0.15em] text-ssj-gold">

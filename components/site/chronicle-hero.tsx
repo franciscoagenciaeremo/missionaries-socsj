@@ -18,8 +18,9 @@ export function ChronicleHero({
   quote: string;
   quoteCitation?: string;
   ctaLabel: string;
-  imageSrc: string;
-  imageAlt: string;
+  /** Sin foto, el hero va sobre fondo azul de marca y más bajo. */
+  imageSrc?: string;
+  imageAlt?: string;
 }) {
   function scrollToSubscribe() {
     document
@@ -28,15 +29,21 @@ export function ChronicleHero({
   }
 
   return (
-    <section className="relative flex min-h-[92vh] items-end overflow-hidden">
-      <Image
-        src={imageSrc}
-        alt={imageAlt}
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
+    <section
+      className={`relative flex items-end overflow-hidden bg-ssj-navy-deep ${
+        imageSrc ? "min-h-[92vh]" : "min-h-[60vh]"
+      }`}
+    >
+      {imageSrc && (
+        <Image
+          src={imageSrc}
+          alt={imageAlt ?? ""}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+      )}
       <div
         aria-hidden="true"
         className="absolute inset-0"

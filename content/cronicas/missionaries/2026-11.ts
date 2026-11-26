@@ -6,9 +6,10 @@ import type { Chronicle } from "@/content/types";
  * Título, frase del hero e intro de la tarjeta: tomados del texto; el
  * título es una propuesta de Eremo y queda sujeto al OK.
  *
- * FALTAN LAS FOTOS: published queda en false hasta cargarlas.
- * Cuando lleguen: hero en heroImage, y las fotos por casa en
- * contentBlocks (un heading por casa + imagePair) o en gallery.
+ * Se publica sin fotos por pedido de Catalina (26/11/2026): el hero y la
+ * tarjeta van sobre fondo azul de marca. Cuando lleguen las fotos: hero en
+ * heroImage, y las fotos por casa en contentBlocks (un heading por casa +
+ * imagePair) o en gallery.
  */
 export const chronicle202611: Chronicle = {
   slug: "2026-11-thanksgiving",
@@ -21,10 +22,6 @@ export const chronicle202611: Chronicle = {
   },
   intro: {
     en: "Our first monthly chronicle for all of our family back in the states.",
-  },
-  heroImage: {
-    src: "/photos/2026-11-thanksgiving-hero.jpg",
-    alt: { en: "Thanksgiving at a Saint John Society mission house" },
   },
   body: { en: [] },
   contentBlocks: [
@@ -50,5 +47,5 @@ export const chronicle202611: Chronicle = {
     { type: "paragraph", text: { en: "Christopher James" } },
   ],
   gallery: [],
-  published: false,
+  published: true,
 };
