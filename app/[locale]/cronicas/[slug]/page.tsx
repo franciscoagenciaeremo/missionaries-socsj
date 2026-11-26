@@ -12,6 +12,7 @@ import { MissionQuote } from "@/components/site/mission-quote";
 import { ZoomableFigure } from "@/components/site/zoomable-figure";
 
 const EMAIL_PATTERN = /([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})/g;
+const BOLD_PATTERN = /\*\*([^*]+)\*\*/g;
 const ITALIC_PATTERN = /\*([^*]+)\*/g;
 
 /** Convierte las direcciones de mail de un tramo de texto en links mailto clickeables. */
@@ -31,16 +32,30 @@ function linkifyEmails(text: string, keyPrefix: string) {
   );
 }
 
-/**
- * Texto de párrafo con formato mínimo: *entre asteriscos* va en itálica
- * (se usa para palabras en latín u otro idioma) y los mails son clickeables.
- */
-function renderInline(text: string) {
+/** Itálica (*entre asteriscos*) y mails clickeables dentro de un tramo. */
+function renderItalic(text: string, keyPrefix: string) {
   return text.split(ITALIC_PATTERN).map((part, i) =>
     i % 2 === 1 ? (
-      <em key={`em-${i}`}>{linkifyEmails(part, `em-${i}`)}</em>
+      <em key={`${keyPrefix}-em-${i}`}>{linkifyEmails(part, `${keyPrefix}-em-${i}`)}</em>
     ) : (
-      linkifyEmails(part, `t-${i}`)
+      linkifyEmails(part, `${keyPrefix}-t-${i}`)
+    )
+  );
+}
+
+/**
+ * Texto de párrafo con formato mínimo: **entre dobles asteriscos** va en
+ * negrita, *entre asteriscos* va en itálica (palabras en latín u otro
+ * idioma) y los mails son clickeables.
+ */
+function renderInline(text: string) {
+  return text.split(BOLD_PATTERN).map((part, i) =>
+    i % 2 === 1 ? (
+      <strong key={`b-${i}`} className="font-bold">
+        {renderItalic(part, `b-${i}`)}
+      </strong>
+    ) : (
+      renderItalic(part, `p-${i}`)
     )
   );
 }
