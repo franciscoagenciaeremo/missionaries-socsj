@@ -42,6 +42,47 @@ export const chronicle202611: Chronicle = {
     },
     { type: "paragraph", text: { en: "In Christ," } },
     { type: "paragraph", text: { en: "Christopher James" } },
+    // PLACEHOLDERS de diseño (pedido de Catalina, 26/11/2026): reemplazar
+    // cada placeholder-N.jpg por la foto real antes de mergear a main.
+    {
+      type: "imagePair",
+      images: [
+        {
+          image: { src: "/photos/placeholder-1.jpg", alt: { en: "Photo 1" } },
+          caption: { en: "" },
+        },
+        {
+          image: { src: "/photos/placeholder-2.jpg", alt: { en: "Photo 2" } },
+          caption: { en: "" },
+        },
+      ],
+    },
+    {
+      type: "imagePair",
+      images: [
+        {
+          image: { src: "/photos/placeholder-3.jpg", alt: { en: "Photo 3" } },
+          caption: { en: "" },
+        },
+        {
+          image: { src: "/photos/placeholder-4.jpg", alt: { en: "Photo 4" } },
+          caption: { en: "" },
+        },
+      ],
+    },
+    {
+      type: "imagePair",
+      images: [
+        {
+          image: { src: "/photos/placeholder-5.jpg", alt: { en: "Photo 5" } },
+          caption: { en: "" },
+        },
+        {
+          image: { src: "/photos/placeholder-6.jpg", alt: { en: "Photo 6" } },
+          caption: { en: "" },
+        },
+      ],
+    },
   ],
   gallery: [],
   published: true,
