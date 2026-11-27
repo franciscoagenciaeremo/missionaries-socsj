@@ -118,19 +118,19 @@ export const chronicle202611: Chronicle = {
     {
       type: "paragraph",
       text: {
-        en: "Greetings from the philosophers in Buenos Aires! It was an international thanksgiving with 3 argentinians, 2 uruguayans, 1 italian, and **the sole american in charge of cooking.**",
+        en: "Greetings from the philosophers in Buenos Aires! It was an international Thanksgiving with 3 Argentinians, 2 Uruguayans, 1 Italian, and **the sole American in charge of cooking.**",
       },
     },
     {
       type: "paragraph",
       text: {
-        en: "It was also a momento to celebrate because as we are in the midst of finals season, we had just taken our Ethics final, which was an oral exam and lasted 3 hours in total, but it went well for all 5 of us!",
+        en: "It was also a moment to celebrate because, as we are in the midst of finals season, we had just taken our Ethics final, which was an oral exam and lasted 3 hours in total, but it went well for all 5 of us!",
       },
     },
     {
       type: "paragraph",
       text: {
-        en: "It was an Argentinian-American Thanksgiving: due to the lack of turkeys in Argentina we had milanesa + the american classics: mashed potatoes, creamed corn, glazed carrots, cranberry sauce, and a homemade stuffing and for dessert pumpkin pie! We took part in the tradition of going around the table and sharing one thing we are thankful for. It was a great moment to spend time together and share about God's blessing in this past year",
+        en: "It was an Argentinian-American Thanksgiving: due to the lack of turkeys in Argentina we had milanesa + the American classics: mashed potatoes, creamed corn, glazed carrots, cranberry sauce, and a homemade stuffing and for dessert pumpkin pie! We took part in the tradition of going around the table and sharing one thing we are thankful for. It was a great moment to spend time together and share about God's blessing in this past year.",
       },
     },
     {
@@ -138,6 +138,10 @@ export const chronicle202611: Chronicle = {
       images: [
         {
           image: { src: "/photos/2026-11-pilar-1.jpg", alt: { en: "The philosophers in Buenos Aires at the Thanksgiving table" } },
+          caption: { en: "" },
+        },
+        {
+          image: { src: "/photos/2026-11-pilar-2.jpg", alt: { en: "Thanksgiving dinner with the philosophers in Buenos Aires" } },
           caption: { en: "" },
         },
       ],
