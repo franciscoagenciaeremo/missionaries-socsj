@@ -22,8 +22,8 @@ export const chronicle202611: Chronicle = {
   },
   body: { en: [] },
   // Carta de Christopher James y luego una sección por casa (título, texto
-  // de la casa tal como llegó, par de fotos). Washington DC, Pilar y Roma
-  // siguen con placeholder-N.jpg hasta que lleguen sus fotos (27/11/2026).
+  // de la casa tal como llegó, par de fotos). Roma no va en
+  // esta crónica (pedido de Catalina, 27/11/2026).
   contentBlocks: [
     {
       type: "paragraph",
@@ -92,43 +92,62 @@ export const chronicle202611: Chronicle = {
       type: "imagePair",
       images: [
         {
-          image: { src: "/photos/placeholder-1.jpg", alt: { en: "Photo 1" } },
+          image: { src: "/photos/2026-11-washington-1.jpg", alt: { en: "The Thanksgiving turkey in Washington, DC" }, objectPosition: "top" },
           caption: { en: "" },
         },
         {
-          image: { src: "/photos/placeholder-2.jpg", alt: { en: "Photo 2" } },
+          image: { src: "/photos/2026-11-washington-2.jpg", alt: { en: "Thanksgiving dinner in Washington, DC" } },
+          caption: { en: "" },
+        },
+      ],
+    },
+    {
+      type: "imagePair",
+      images: [
+        {
+          image: { src: "/photos/2026-11-washington-3.jpg", alt: { en: "Thanksgiving dinner in Washington, DC" } },
+          caption: { en: "" },
+        },
+        {
+          image: { src: "/photos/2026-11-washington-4.jpg", alt: { en: "Thanksgiving dinner in Washington, DC" } },
           caption: { en: "" },
         },
       ],
     },
     { type: "heading", text: { en: "Pilar, Argentina" } },
     {
-      type: "imagePair",
-      images: [
-        {
-          image: { src: "/photos/placeholder-3.jpg", alt: { en: "Photo 3" } },
-          caption: { en: "" },
-        },
-        {
-          image: { src: "/photos/placeholder-4.jpg", alt: { en: "Photo 4" } },
-          caption: { en: "" },
-        },
-      ],
+      type: "paragraph",
+      text: {
+        en: "Greetings from the philosophers in Buenos Aires! It was an international Thanksgiving with 3 Argentinians, 2 Uruguayans, 1 Italian, and **the sole American in charge of cooking.**",
+      },
     },
-    { type: "heading", text: { en: "Rome, Italy" } },
+    {
+      type: "paragraph",
+      text: {
+        en: "It was also a moment to celebrate because, as we are in the midst of finals season, we had just taken our Ethics final, which was an oral exam and lasted 3 hours in total, but it went well for all 5 of us!",
+      },
+    },
+    {
+      type: "paragraph",
+      text: {
+        en: "It was an Argentinian-American Thanksgiving: due to the lack of turkeys in Argentina we had milanesa + the American classics: mashed potatoes, creamed corn, glazed carrots, cranberry sauce, and a homemade stuffing and for dessert pumpkin pie! We took part in the tradition of going around the table and sharing one thing we are thankful for. It was a great moment to spend time together and share about God's blessing in this past year.",
+      },
+    },
     {
       type: "imagePair",
       images: [
         {
-          image: { src: "/photos/placeholder-5.jpg", alt: { en: "Photo 5" } },
+          image: { src: "/photos/2026-11-pilar-1.jpg", alt: { en: "The philosophers in Buenos Aires at the Thanksgiving table" } },
           caption: { en: "" },
         },
         {
-          image: { src: "/photos/placeholder-6.jpg", alt: { en: "Photo 6" } },
+          image: { src: "/photos/2026-11-pilar-2.jpg", alt: { en: "Thanksgiving dinner with the philosophers in Buenos Aires" } },
           caption: { en: "" },
         },
       ],
     },
+    { type: "paragraph", text: { en: "An Argentinian greeting to all," } },
+    { type: "paragraph", text: { en: "Reed" } },
   ],
   gallery: [],
   published: true,
