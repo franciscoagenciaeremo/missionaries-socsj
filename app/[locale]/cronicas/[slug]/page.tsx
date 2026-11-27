@@ -155,7 +155,11 @@ export default async function ChroniclePage({
                   return (
                     <div
                       key={index}
-                      className="clear-both grid grid-cols-1 gap-4 sm:grid-cols-2"
+                      className={
+                        block.images.length > 1
+                          ? "clear-both grid grid-cols-1 gap-4 sm:grid-cols-2"
+                          : "clear-both grid grid-cols-1 gap-4"
+                      }
                     >
                       {block.images.map((item, i) => (
                         <ZoomableFigure
