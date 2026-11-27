@@ -21,8 +21,9 @@ export const chronicle202611: Chronicle = {
     en: "Our first monthly chronicle for all of our family back in the states.",
   },
   body: { en: [] },
-  // PLACEHOLDERS de diseño (pedido de Catalina, 26/11/2026): reemplazar
-  // cada placeholder-N.jpg por la foto real antes de mergear a main.
+  // Carta de Christopher James y luego una sección por casa (título, texto
+  // de la casa tal como llegó, par de fotos). Washington DC, Pilar y Roma
+  // siguen con placeholder-N.jpg hasta que lleguen sus fotos (27/11/2026).
   contentBlocks: [
     {
       type: "paragraph",
@@ -30,6 +31,63 @@ export const chronicle202611: Chronicle = {
         en: "Happy Thanksgiving or as some would say \"Happy Turkey Day\" to all of our family back in the states! It's a joy to send our first monthly chronicle to all of you as we are all **scattered about the globe as seed is sown by the Sower!** Some of us are in the UK, some in Europe, some in South America and for now on the East Coast!",
       },
     },
+    {
+      type: "paragraph",
+      text: {
+        en: "We wanted to show a bit more of the fun and \"hidden\" or common life that we are experiencing so you can get a \"wee\" taste as they would say in Scotland. So look forward to next months edition. **Thank you for your prayers, love and support** as we seek to do the will of God as missionaries in the Saint John Society!",
+      },
+    },
+    {
+      type: "paragraph",
+      text: {
+        en: "But for now enjoy seeing how we all are keeping our American tradition alive with turkey, stuffing and gravy... **And lots of it!**",
+      },
+    },
+    { type: "paragraph", text: { en: "In Christ," } },
+    { type: "paragraph", text: { en: "Christopher James" } },
+    { type: "heading", text: { en: "Stirling, Scotland" } },
+    {
+      type: "paragraph",
+      text: {
+        en: "We celebrated thanksgiving **to the annoyance of the Brits**, with the Volunteer missionaries and students! Fr. Ivan, Fr. Federico, Fr. Hermogenes, Christopher and John.",
+      },
+    },
+    {
+      type: "imagePair",
+      images: [
+        {
+          image: { src: "/photos/2026-11-stirling-2.jpg", alt: { en: "Thanksgiving dinner in Stirling with the Volunteer missionaries and students" } },
+          caption: { en: "" },
+        },
+        {
+          image: { src: "/photos/2026-11-stirling-1.jpg", alt: { en: "The Thanksgiving table in Stirling" } },
+          caption: { en: "" },
+        },
+      ],
+    },
+    { type: "heading", text: { en: "Serrezuela, Argentina" } },
+    {
+      type: "paragraph",
+      text: {
+        en: "Beyond the experience! A benefactor hosted us to celebrate Thanksgiving. With prior instructions and help from Joseph, the results exceeded expectations. At the table, **we took turns sharing what we were grateful to God for this year.**",
+      },
+    },
+    {
+      type: "imagePair",
+      images: [
+        {
+          image: { src: "/photos/2026-11-serrezuela-1.jpg", alt: { en: "The missionaries in Serrezuela with the Thanksgiving turkey" } },
+          caption: { en: "" },
+        },
+        {
+          image: { src: "/photos/2026-11-serrezuela-2.jpg", alt: { en: "Thanksgiving dinner in Serrezuela" } },
+          caption: { en: "" },
+        },
+      ],
+    },
+    { type: "paragraph", text: { en: "Best regards." } },
+    { type: "paragraph", text: { en: "Fr. Juan Ignacio" } },
+    { type: "heading", text: { en: "Washington, DC" } },
     {
       type: "imagePair",
       images: [
@@ -43,12 +101,7 @@ export const chronicle202611: Chronicle = {
         },
       ],
     },
-    {
-      type: "paragraph",
-      text: {
-        en: "We wanted to show a bit more of the fun and \"hidden\" or common life that we are experiencing so you can get a \"wee\" taste as they would say in Scotland. So look forward to next months edition. **Thank you for your prayers, love and support** as we seek to do the will of God as missionaries in the Saint John Society!",
-      },
-    },
+    { type: "heading", text: { en: "Pilar, Argentina" } },
     {
       type: "imagePair",
       images: [
@@ -62,12 +115,7 @@ export const chronicle202611: Chronicle = {
         },
       ],
     },
-    {
-      type: "paragraph",
-      text: {
-        en: "But for now enjoy seeing how we all are keeping our American tradition alive with turkey, stuffing and gravy... **And lots of it!**",
-      },
-    },
+    { type: "heading", text: { en: "Rome, Italy" } },
     {
       type: "imagePair",
       images: [
@@ -81,8 +129,6 @@ export const chronicle202611: Chronicle = {
         },
       ],
     },
-    { type: "paragraph", text: { en: "In Christ," } },
-    { type: "paragraph", text: { en: "Christopher James" } },
   ],
   gallery: [],
   published: true,
