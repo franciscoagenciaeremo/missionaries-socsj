@@ -22,8 +22,8 @@ export const chronicle202611: Chronicle = {
   },
   body: { en: [] },
   // Carta de Christopher James y luego una sección por casa (título, texto
-  // de la casa tal como llegó, par de fotos). Roma sigue con
-  // placeholder-5/6.jpg hasta que lleguen sus fotos (27/11/2026).
+  // de la casa tal como llegó, par de fotos). Roma no va en
+  // esta crónica (pedido de Catalina, 27/11/2026).
   contentBlocks: [
     {
       type: "paragraph",
@@ -144,20 +144,6 @@ export const chronicle202611: Chronicle = {
     },
     { type: "paragraph", text: { en: "An Argentinian greeting to all," } },
     { type: "paragraph", text: { en: "Reed" } },
-    { type: "heading", text: { en: "Rome, Italy" } },
-    {
-      type: "imagePair",
-      images: [
-        {
-          image: { src: "/photos/placeholder-5.jpg", alt: { en: "Photo 5" } },
-          caption: { en: "" },
-        },
-        {
-          image: { src: "/photos/placeholder-6.jpg", alt: { en: "Photo 6" } },
-          caption: { en: "" },
-        },
-      ],
-    },
   ],
   gallery: [],
   published: true,
